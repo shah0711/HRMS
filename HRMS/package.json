@@ -1,0 +1,42 @@
+{
+  "name": "hrms-system",
+  "version": "1.0.0",
+  "description": "Comprehensive Human Resource Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "dev-all": "concurrently \"npm run dev\" \"npm run client\"",
+    "db:push": "drizzle-kit push --config=drizzle.config.js",
+    "db:studio": "drizzle-kit studio --config=drizzle.config.js"
+  },
+  "keywords": [
+    "hrms",
+    "hr",
+    "employee-management",
+    "payroll",
+    "attendance"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.45.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "drizzle-kit": "^0.31.8",
+    "nodemon": "^3.0.1"
+  }
+}
